@@ -52,10 +52,8 @@ class Queue(object):
             >>> q.length()
             3
         """
-
-        # FIXME
-
-        pass
+        self._list.append(item)
+        return
 
     def peek(self):
         """Return but don't remove the first item in the queue.
@@ -72,9 +70,7 @@ class Queue(object):
             <Queue ['buy flight', 'pack', 'enjoy vacation']>
         """
 
-        # FIXME
-
-        pass
+        return self._list[0]
 
 if __name__ == "__main__":
     import doctest
