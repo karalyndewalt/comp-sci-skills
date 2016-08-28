@@ -76,9 +76,12 @@ class LinkedList(object):
             fish
         """
 
-        # FIXME
-
-        pass
+        node = self.head
+        while node is not self.tail:
+            print node.data
+            node = node.next
+        print self.tail.data
+        return
 
     def get_node_by_index(self, idx):
         """Return a node with the given index::
@@ -95,9 +98,16 @@ class LinkedList(object):
             <Node fish>
         """
 
-        # FIXME
-
-        pass
+        node = self.head
+        index = 0
+        if idx == 0:
+            return self.head
+        else:
+            while node is not self.tail:
+                while index != idx:
+                    node = node.next
+                    index = index + 1
+            return node
 
 if __name__ == "__main__":
     import doctest
@@ -107,4 +117,3 @@ if __name__ == "__main__":
     if not result.failed:
         print "ALL TESTS PASSED. GOOD WORK!"
     print
-
