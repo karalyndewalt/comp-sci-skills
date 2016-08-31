@@ -1,0 +1,69 @@
+Part 1: Discussion Questions
+
+Runtime
+
+When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+* How many pieces are in the box of animal crackers (how big it is) and how many different animals are represented by crackers. 
+
+Order the following runtimes in ascending order by efficiency as n approaches infinity:
+*
+O(1)
+O(2n)
+O(log n),
+O(n log n)
+O(n)
+O(n2)
+
+
+
+Stacks and Queues
+
+In the following cases, would a stack or queue be a more appropriate data structure?
+
+The process of loading and unloading pallets onto a flatbed truck
+* stack
+
+Putting bottle caps on bottles of beer as they roll down an assembly line
+* queue
+
+
+Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+* stack
+
+
+Describe two more situations where a queue would be an appropriate data structure.
+* Customer support call center
+* Restaurant kitchen - orders should be first in, first out
+
+Describe two more situations where a stack would be an appropriate data structure.
+* Washing dishes
+* Getting out of the elevator
+
+
+Linked Lists
+
+Given the linked list below, which are the nodes? * The boxes with the data labels Apple, Berry, Cherry are the nodes
+What is the data for each node? * Apple, Berry, Cherry
+Where is the head? * The box marked head 
+Where is the tail? * The box marked Cherry
+(Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+What’s the difference between doubly- and singly-linked lists? *In singly-linked lists, the object doesn't know about the one it came from, only the next one. You can only search it in one direction. In doubly-linked the objects know about the one it came from and the one after it, you can traverse it in either direction.
+
+Why is it faster to append to a linked list if we keep track of the tail as an attribute? * You don't need to go through the whole list looking for an object that doesn't have a next, you just go to the tail and add the new piece there.
+
+
+Trees
+
+
+1. Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? 
+* Left to right, top to bottom.
+
+
+2. Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? 
+* Top to Bottom and then left to right.
+
+
+3. How is a binary search tree different from other trees?
+*Every node has two branches coming from it. 

@@ -26,9 +26,10 @@ class Node(object):
             2
         """
 
-        # FIXME
-
-        pass
+        count = 0
+        for child in self.children:
+            count = count + 1
+        return count
 
 
 class Tree(object):
@@ -57,7 +58,6 @@ class Tree(object):
                 return node
 
             to_visit.extend(node.children)
-
 
     def breadth_first_search(self, data):
         """Return node object with this data, traversing the tree breadth-first.
@@ -93,8 +93,14 @@ class Tree(object):
 
         """
 
-        # FIXME
-        pass
+        to_visit = [self.root]
+
+        for node in to_visit:
+            if node.data == data:
+                return True
+            else:
+                to_visit.extend(node.chidren)
+                to_visit.remove(node)
 
 if __name__ == "__main__":
     import doctest
@@ -104,4 +110,3 @@ if __name__ == "__main__":
     if not result.failed:
         print "ALL TESTS PASSED. GOOD WORK!"
     print
-
